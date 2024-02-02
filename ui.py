@@ -26,8 +26,10 @@ class View(QWidget):
         self.le2=QLineEdit('0',self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
         
+
         self.cb = QComboBox(self)
         self.cb.addItems(['+', '-', '*', '/'])
+        
         
         hbox_formular = QHBoxLayout()
         hbox_formular.addWidget(self.le1)
