@@ -27,6 +27,7 @@ class Control:
         except:
             return "Calculation Error"
 
+
     def connectSignals(self):
         self.view.btn1.clicked.connect(lambda: self.view.setDisplay(self.calculate()))
         self.view.btn2.clicked.connect(self.view.clearMessage)
@@ -56,3 +57,12 @@ class Control:
             return e
         
         return pow(a, b)
+    
+    def mod(self, a, b): # 나눗셈 연산의 나머지를 리턴하는 함수 추가
+        try:
+            if(b==0):
+                raise Exception("Divisor Error")
+        except Exception as e:
+            return e
+
+        return a % b
