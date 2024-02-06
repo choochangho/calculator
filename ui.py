@@ -28,9 +28,9 @@ class View(QWidget):
         
 
         self.cb = QComboBox(self)
-        self.cb.addItems(['+', '-', '*', '/'])
+        self.cb.addItems(['+', '-', '*', '/', '^', '%']) # % 연산자 추가
         
-        
+
         hbox_formular = QHBoxLayout()
         hbox_formular.addWidget(self.le1)
         hbox_formular.addWidget(self.cb)
